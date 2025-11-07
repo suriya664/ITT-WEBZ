@@ -1,0 +1,108 @@
+============================================
+ACYBERCLOUD TEMPLATE - FTP UPLOAD GUIDE
+============================================
+
+YOUR WEBSITE IS 100% READY FOR UPLOAD!
+
+FILES TO UPLOAD:
+----------------
+Upload the ENTIRE "acybercloud-template" folder to your web server.
+
+IMPORTANT FOLDER STRUCTURE:
+----------------------------
+acybercloud-template/
+├── pages/          (All HTML pages - 20 pages)
+│   ├── index.html  (Homepage - IMPORTANT!)
+│   ├── login.html
+│   ├── register.html
+│   └── ... (all other pages)
+├── assets/         (CSS, JS, Images)
+│   ├── css/
+│   ├── js/
+│   └── img/
+└── README.txt
+
+UPLOAD METHODS:
+---------------
+
+METHOD 1: Using FTP Client (FileZilla, WinSCP, etc.)
+1. Connect to your FTP server
+2. Navigate to public_html or www folder
+3. Upload entire "acybercloud-template" folder
+4. After upload, rename "acybercloud-template" to your desired name (optional)
+
+METHOD 2: Using cPanel File Manager
+1. Login to cPanel
+2. Open File Manager
+3. Navigate to public_html
+4. Upload the entire "acybercloud-template" folder
+5. Extract if uploaded as ZIP
+
+METHOD 3: Using Command Line (SSH)
+1. SSH into your server
+2. cd to public_html
+3. Upload files using SCP or SFTP
+
+IMPORTANT CONFIGURATION:
+------------------------
+
+OPTION A: If index.html is in pages/ folder:
+- Your homepage URL will be: yourdomain.com/pages/index.html
+- Or set up URL rewriting to make it: yourdomain.com/
+
+OPTION B: Move index.html to root (RECOMMENDED):
+1. Copy index.html from pages/ to root (acybercloud-template/)
+2. Update all links in index.html:
+   - Change "about.html" to "pages/about.html"
+   - Change "services.html" to "pages/services.html"
+   - etc. for all internal links
+
+OPTION C: Use .htaccess (Apache servers):
+Create .htaccess in root with:
+---
+RewriteEngine On
+RewriteRule ^$ pages/index.html [L]
+RewriteRule ^([^/]+)/?$ pages/$1.html [L]
+---
+
+AFTER UPLOAD CHECKLIST:
+-----------------------
+✓ All files uploaded successfully
+✓ Check homepage loads: yourdomain.com/pages/index.html
+✓ Test navigation links
+✓ Verify images load correctly
+✓ Check CSS and JS files load
+✓ Test login and register pages
+✓ Verify contact form (if configured)
+✓ Test on mobile devices
+✓ Check all pages are accessible
+
+QUICK TEST:
+-----------
+1. Open: yourdomain.com/pages/index.html
+2. Click on "Login" in navbar
+3. Click on "Register" in navbar
+4. Navigate through all pages
+
+TROUBLESHOOTING:
+----------------
+- 404 Errors: Check file paths and .htaccess
+- CSS not loading: Check assets/css/ folder path
+- Images not showing: Check assets/img/ folder path
+- Links broken: Verify all href paths are correct
+
+CONTACT INFO IN TEMPLATE:
+-------------------------
+All pages have Indian contact information:
+- Address: 91/5 Outer Ring Road, Bellandur, Bengaluru, Karnataka 560103, India
+- Phone: +91 98765 43210
+- Email: info@acybercloud.in
+- Hours: Mon-Fri: 9AM - 6PM IST
+
+READY TO UPLOAD!
+================
+Your website is complete and ready for production.
+All 20 pages are functional and responsive.
+
+Good luck with your website launch! 🚀
+
